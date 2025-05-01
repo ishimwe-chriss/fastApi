@@ -4,7 +4,7 @@ from .database import engine
 from .routes import post, user, auth, vote
 from fastapi.middleware.cors import CORSMiddleware
 
-# models.Base.metadata.create_all(bind=engine)  # To force create tables in database
+models.Base.metadata.create_all(bind=engine)  # To force create tables in database
 
 app = FastAPI()
 
